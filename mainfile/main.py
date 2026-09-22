@@ -48,7 +48,7 @@ def create_files():
         for i, line in enumerate(lines): 
             for j in range(len(template)): 
                 if line.startswith(template[j][0]): 
-                    lines[i] = template[j][0] + template[j][1]
+                    lines[i] = template[j][0] + ' ' + template[j][1]
                     found += 1
             if found == len(template): break
         try:
@@ -64,7 +64,6 @@ def create_files():
     messagebox.showinfo('Success', f'Successfully processed {count} file(s).')
     return
 def browse_file():
-    '''讓用戶從電腦中選取一個檔案（作為輸出檔案）。'''
     filetype = filetype_combo.get().strip()
     ext = '.' + file_data[filetype]['type']
     try: filename = f"lab{int(entry['lab'].get().strip()):02d}ex{int(entry['ex'].get().strip()):02d}{ext}"
@@ -72,7 +71,7 @@ def browse_file():
     default_dir = file_data[filetype]['inpath']
     types = [(ext, '*' + ext), ('All files', '*.*')]
     path = filedialog.asksaveasfilename(
-        title='選擇輸出檔案',
+        title = '選擇輸出檔案',
         initialdir = default_dir if os.path.isdir(default_dir) else None,
         initialfile = filename,
         defaultextension = ext,
