@@ -10,7 +10,7 @@ build-backend = "setuptools.build_meta"
 
 # ---------- 2. 套件元資料 ----------
 [project]
-name = "prog-file-manager"
+name = "programming-files-manager"
 version = "0.1.0"
 description = "Generate programming assignment files from templates (GUI + CLI)."
 readme = "README.md"
