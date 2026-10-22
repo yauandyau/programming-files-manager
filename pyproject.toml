@@ -8,7 +8,6 @@
 requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
-
 # ---------- 2. 套件元資料 ----------
 [project]
 name = "prog-file-manager"
@@ -36,7 +35,6 @@ classifiers = [
 # 執行時依賴：本專案只用標準庫（csv / json / tkinter / argparse）。
 dependencies = []
 
-
 # ---------- 3. 可選依賴 ----------
 [project.optional-dependencies]
 dev = [
@@ -46,17 +44,14 @@ dev = [
     "ruff>=0.5",
 ]
 
-
 # ---------- 4. 命令列入口 ----------
 [project.scripts]
 pfm = "prog_file_manager.cli:main"
-
 
 # ---------- 5. 告訴 setuptools 原始碼在 src/ ----------
 [tool.setuptools.packages.find]
 where = ["src"]
 include = ["prog_file_manager*"]
-
 
 # ---------- 6. pytest ----------
 [tool.pytest.ini_options]
@@ -66,7 +61,6 @@ addopts = "-ra --strict-markers"
 markers = [
     "gui: tests that require a display / tkinter",
 ]
-
 
 # ---------- 7. coverage ----------
 [tool.coverage.run]
@@ -82,7 +76,6 @@ exclude_lines = [
     "raise NotImplementedError",
 ]
 
-
 # ---------- 8. mypy ----------
 [tool.mypy]
 python_version = "3.9"
@@ -94,7 +87,6 @@ warn_redundant_casts = true
 [[tool.mypy.overrides]]
 module = "prog_file_manager.gui.*"
 disallow_untyped_defs = false
-
 
 # ---------- 9. ruff（linter + formatter） ----------
 [tool.ruff]
