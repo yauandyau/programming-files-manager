@@ -17,7 +17,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [
-    { name = "Peter", email = "you@example.com" },
+    { name = "yauandyau", email = "1155257402@link.cuhk.edu.hk" },
 ]
 keywords = ["education", "template", "tkinter", "cli"]
 classifiers = [
